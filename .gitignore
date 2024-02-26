@@ -6,6 +6,9 @@
 .vscode/
 .idea/
 
+# npm
+node_modules
+
 # User-specific files
 *.suo
 *.user
