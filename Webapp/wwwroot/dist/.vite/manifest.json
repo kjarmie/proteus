@@ -1,0 +1,52 @@
+{
+  "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf": {
+    "file": "fa-brands-400.ttf",
+    "src": "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"
+  },
+  "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2": {
+    "file": "fa-brands-400.woff2",
+    "src": "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"
+  },
+  "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf": {
+    "file": "fa-regular-400.ttf",
+    "src": "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf"
+  },
+  "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2": {
+    "file": "fa-regular-400.woff2",
+    "src": "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2"
+  },
+  "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf": {
+    "file": "fa-solid-900.ttf",
+    "src": "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"
+  },
+  "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2": {
+    "file": "fa-solid-900.woff2",
+    "src": "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"
+  },
+  "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.ttf": {
+    "file": "fa-v4compatibility.ttf",
+    "src": "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.ttf"
+  },
+  "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2": {
+    "file": "fa-v4compatibility.woff2",
+    "src": "../../../node_modules/.pnpm/@fortawesome+fontawesome-free@6.5.1/node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2"
+  },
+  "site.js": {
+    "file": "main.js",
+    "src": "site.js",
+    "isEntry": true,
+    "css": [
+      "main.css"
+    ],
+    "assets": [
+      "fa-brands-400.woff2",
+      "fa-brands-400.ttf",
+      "fa-regular-400.woff2",
+      "fa-regular-400.ttf",
+      "fa-solid-900.woff2",
+      "fa-solid-900.ttf",
+      "fa-v4compatibility.woff2",
+      "fa-v4compatibility.ttf"
+    ]
+  }
+}
