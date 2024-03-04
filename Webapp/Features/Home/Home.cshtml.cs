@@ -32,13 +32,13 @@ public class HomeEndpoint : EndpointWithoutRequest
 
 [HttpGet(Url)]
 [AllowAnonymous]
-public class CurrentTimeEndpoint : EndpointWithoutRequest
+public class RandomNumberEndpoint : EndpointWithoutRequest
 {
-    public const string Url = "/api/time";
+    public const string Url = "/api/random";
 
     public override async Task HandleAsync(CancellationToken ct)
     {
-        await SendResultAsync(Results.Content(DateTime.Now.ToLongTimeString(), "text/html"));
+        await SendResultAsync(Results.Content(Random.Shared.Next(10000).ToString(), "text/html"));
     }
 }
 
@@ -52,7 +52,7 @@ public class PollingTimeEndpoint : EndpointWithoutRequest
     {
         await SendResultAsync(Results.Content(html(
             $"""
-             <div id="time" hx-trigger="every 1s" hx-get="{Url}" hx-swap="outerHtml transition:true">{DateTime.Now.ToLongTimeString()}</div>
+             <div id="target" hx-trigger="every 1s" hx-get="{Url}" hx-swap="outerHtml transition:true">{DateTime.Now.ToLongTimeString()}</div>
              """), "text/html"));
     }
 }

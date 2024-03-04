@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        sakg: '#009578'
+        teal: '#009578'
       },
       screens: {
         '3xl': '1792px'
@@ -95,7 +95,7 @@ export default {
   daisyui: {
     themes: [
       {
-        sakg: {
+        proteus: {
           "primary": "#009578",
           "primary-content": "#ffffff",
           "secondary": "#60b53c",

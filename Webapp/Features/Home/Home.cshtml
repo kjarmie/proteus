@@ -11,22 +11,21 @@
             <img src="images/dotnet.svg" class="aspect-square size-32" alt="Dotnet logo"/>
         </a>
         <a href="https://htmx.org/" target="_blank">
-            <img src="images/htmx2.svg" class="aspect-square size-32" alt="Vite logo"/>
+            <img src="images/htmx.svg" class="aspect-square size-32" alt="HTMX logo"/>
         </a>
         <a href="https://vitejs.dev" target="_blank">
             <img src="images/vite.svg" class="aspect-square size-32" alt="Vite logo"/>
         </a>
-
         <a href="https://tailwindcss.com/" target="_blank">
-            <img src="images/tailwind.svg" class="aspect-square size-32" alt="Vite logo"/>
+            <img src="images/tailwind.svg" class="aspect-square size-32" alt="Tailwind logo"/>
         </a>
     </div>
     <h1 class="text-center text-5xl">ASP.NET + HTMX + Vite + Tailwind</h1>
     <p class="text-center">And a sprinkling of other little technologies</p>
     <div class="flex flex-col items-center">
-        <button hx-get="@CurrentTimeEndpoint.Url" hx-swap="innerHTML" hx-target="#time" class="block btn btn-small btn-link">Get the current time</button>
-        <button hx-get="@PollingTimeEndpoint.Url" hx-swap="outerHTML transition:true" hx-target="#time" class="block btn btn-small btn-link">Start polling current time</button>
-        <div id="time"></div>
+        <button hx-get="@RandomNumberEndpoint.Url" hx-swap="innerHTML" hx-target="#target" class="block btn btn-small btn-link">Get a random number</button>
+        <button hx-get="@PollingTimeEndpoint.Url" hx-swap="outerHTML transition:true" hx-target="#target" class="block btn btn-small btn-link">Start polling current time</button>
+        <div id="target"></div>
     </div>
 
     <a href="@Examples.Url" class="text-center text-lg link">
