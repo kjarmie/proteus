@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Reflection;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.AspNetCore.Razor.Hosting;
 using RazorSlices;
 
 namespace Webapp.lib.Razor;
@@ -29,7 +31,7 @@ public class RazorViewToStringRenderer : IRazorViewToStringRenderer
         _serviceProvider = serviceProvider;
     }
 
-    public async Task<string> RenderViewToStringAsync<TModel>(string viewName, TModel model)
+    public async Task<string> RenderToStringAsync<TModel>(string viewName, TModel model)
     {
         var actionContext = GetActionContext();
         var view = FindView(actionContext, viewName);
@@ -86,5 +88,28 @@ public class RazorViewToStringRenderer : IRazorViewToStringRenderer
         var httpContext = new DefaultHttpContext();
         httpContext.RequestServices = _serviceProvider;
         return new ActionContext(httpContext, new RouteData(), new ActionDescriptor());
+    }
+
+    public async Task<string> RenderToStringForModelAsync<T>(T model)
+    {
+        var assembly = Assembly.GetExecutingAssembly();
+
+        var types = assembly.GetTypes();
+
+        var viewType = types.First(e => e.IsSubclassOf(typeof(RazorPage<T>)));
+
+        var attr = viewType.GetCustomAttribute<RazorCompiledItemMetadataAttribute>();
+
+        var identifier = attr?.Value;
+
+        if (identifier is null)
+            identifier = viewType.GetCustomAttribute<RazorSourceChecksumAttribute>()?.Identifier;
+
+        if (identifier is null)
+            throw new Exception("The model provided is not associated with any view.");
+
+        var result = await RenderToStringAsync(identifier, model);
+
+        return result;
     }
 }

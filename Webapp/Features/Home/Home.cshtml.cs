@@ -25,7 +25,7 @@ public class HomeEndpoint : EndpointWithoutRequest
 
     public override async Task HandleAsync(CancellationToken ct)
     {
-        var content = await _renderer.GetViewForModel(new Home());
+        var content = await _renderer.RenderToStringForModelAsync(new Home());
         await SendResultAsync(Results.Content(content, "text/html"));
     }
 }

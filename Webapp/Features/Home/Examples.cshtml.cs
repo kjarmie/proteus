@@ -19,7 +19,7 @@ public class ExamplesEndpoint : EndpointWithoutRequest
 
     public override async Task HandleAsync(CancellationToken ct)
     {
-        var content = await _renderer.GetViewForModel(new Examples());
+        var content = await _renderer.RenderToStringForModelAsync(new Examples());
         await SendResultAsync(Results.Content(content, "text/html"));
     }
 }

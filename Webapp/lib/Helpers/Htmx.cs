@@ -5,7 +5,7 @@ namespace Webapp.lib.Helpers;
 public static class Htmx
 {
     /// <summary>
-    /// Very simple helper method to format text as html in Jetbrains IDE's or when using
+    /// Very simple helper method to format text as html in Jetbrains IDE's or ReSharper
     /// </summary>
     /// <param name="html"></param>
     /// <returns></returns>

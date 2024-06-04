@@ -43,10 +43,14 @@ services.AddRouting(options => { options.LowercaseUrls = true; });
 
 services.AddFastEndpoints();
 
-services.AddViteServices();
+services.AddViteServices(options =>
+{
+    options.Server.AutoRun = true;
+    options.Server.Https = true;
+});
 
 // We need the Razor pages service, but you will see below, we don't map the Razor Pages on the WebApplication
-var mvcBuilder = builder.Services.AddRazorPages();
+var mvcBuilder = services.AddRazorPages();
 if (builder.Environment.IsDevelopment())
 {
     // Allows hot reload
